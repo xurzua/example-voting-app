@@ -108,7 +108,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: result
+  name: result-service
   labels:
     app: result
 spec:
@@ -116,7 +116,6 @@ spec:
   ports:
     - port: 5001
       targetPort: 80
-      name: result-service
   selector:
     app: result
 ---
@@ -148,7 +147,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: vote
+  name: vote-service
   labels:
     apps: vote
 spec:
@@ -156,7 +155,6 @@ spec:
   ports:
     - port: 5000
       targetPort: 80
-      name: vote-service
   selector:
     app: vote
 ---
